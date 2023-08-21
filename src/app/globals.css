@@ -25,3 +25,8 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.animated-container {
+  display: inline-flex!important;
+  text-align: center
+}

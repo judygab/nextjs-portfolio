@@ -4,8 +4,26 @@ import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import axios from "axios";
 
 const HeroSection = () => {
+  const downloadCV = async () => {
+    try {
+      const response = await axios.get("/api/cv", {
+        responseType: "blob",
+      });
+      const link = document.createElement("a");
+      const blob = new Blob([response.data], { type: "application/pdf" });
+      link.href = window.URL.createObjectURL(blob);
+      link.download = "Cv.pdf";
+      link.click();
+
+      window.URL.revokeObjectURL(link.href);
+    } catch (error) {
+      console.error("Error downloading CV:", error);
+    }
+  };
+
   return (
     <section className="lg:py-16">
       <div className="grid grid-cols-1 sm:grid-cols-12">
@@ -15,8 +33,8 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
         >
-          <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
+          <h1 className="text-white mb-4 text-3xl sm:text-3xl lg:text-5xl lg:leading-normal font-extrabold">
+            <span className="text-transparent text-5xl sm:text-6xl lg:text-8xl bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
               Hello, I&apos;m{" "}
             </span>
             <br></br>
@@ -48,7 +66,8 @@ const HeroSection = () => {
               Hire Me
             </Link>
             <Link
-              href="/"
+              href="#"
+              onClick={downloadCV}
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3"
             >
               <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">

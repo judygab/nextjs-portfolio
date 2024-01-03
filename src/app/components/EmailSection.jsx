@@ -51,9 +51,13 @@ const EmailSection = () => {
         </h5>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
           {" "}
-          I&apos;m currently looking for new opportunities, my inbox is always
-          open. Whether you have a question or just want to say hi, I&apos;ll
-          try my best to get back to you!
+          We are excited to announce that we are actively seeking new clients! Our 
+          team is dedicated to providing exceptional service and innovative solutions
+           tailored to meet your unique needs. Whether you're a small business, a 
+           large corporation, or an individual looking for specialized assistance, 
+           we're here to help you achieve your goals. Partner with us to experience 
+           a commitment to excellence and a passion for delivering results that exceed 
+           expectations. Let's collaborate to create success together!
         </p>
         <div className="socials flex flex-row gap-2">
           <Link href="github.com">
@@ -66,7 +70,7 @@ const EmailSection = () => {
       </div>
       <div>
         {emailSubmitted ? (
-          <p className="text-green-500 text-sm mt-2">
+          <p className="text-emerald-400 text-sm mt-2">
             Email sent successfully!
           </p>
         ) : (

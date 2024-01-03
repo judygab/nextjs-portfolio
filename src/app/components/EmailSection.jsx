@@ -53,11 +53,11 @@ const EmailSection = () => {
           {" "}
           we&apos;re excited to announce that we are actively seeking new clients! Our 
           team is dedicated to providing exceptional service and innovative solutions
-           tailored to meet your unique needs. Whether you're a small business, a 
+           tailored to meet your unique needs. Whether you&apos;sre a small business, a 
            large corporation, or an individual looking for specialized assistance, 
            we&apos;re here to help you achieve your goals. Partner with us to experience 
            a commitment to excellence and a passion for delivering results that exceed 
-           expectations. Let's collaborate to create success together!
+           expectations. Let&apos;ss collaborate to create success together!
         </p>
         <div className="socials flex flex-row gap-2">
           <Link href="github.com">
@@ -118,7 +118,7 @@ const EmailSection = () => {
                 name="message"
                 id="message"
                 className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                placeholder="Let's talk about..."
+                placeholder="Let&apos;ss talk about..."
               />
             </div>
             <button

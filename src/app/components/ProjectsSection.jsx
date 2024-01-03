@@ -7,56 +7,38 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
-    title: "React Portfolio Website",
-    description: "Project 1 description",
+    title: "Emei",
+    description: "Alternative-pop singer / songwriter.",
     image: "/images/projects/1.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    tag: ["All", "Artist", "Servers"],
+    gitUrl: "https://discord.gg/nDwSqJEGyP",
+    previewUrl: "https://beacons.ai/emei",
   },
   {
     id: 2,
-    title: "Potography Portfolio Website",
-    description: "Project 2 description",
+    title: "Haiden",
+    description: "American pop singer / songwriter.",
     image: "/images/projects/2.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    tag: ["All", "Artist", "Servers"],
+    gitUrl: "https://discord.gg/haidenhenderson",
+    previewUrl: "https://haiden.komi.io/",
   },
   {
     id: 3,
-    title: "E-commerce Application",
-    description: "Project 3 description",
+    title: "Stela Cole",
+    description: "American pop singer / songwriter.",
     image: "/images/projects/3.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    tag: ["All", "Artist", "Servers"],
+    gitUrl: "https://discord.gg/9fveAFPxnx",
+    previewUrl: "https://ffm.bio/callmestelacole",
   },
   {
     id: 4,
-    title: "Food Ordering Application",
-    description: "Project 4 description",
+    title: "BotL Management",
+    description: "Hub for all things BotL Management.",
     image: "/images/projects/4.png",
-    tag: ["All", "Mobile"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 5,
-    title: "React Firebase Template",
-    description: "Authentication and CRUD operations",
-    image: "/images/projects/5.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 6,
-    title: "Full-stack Roadmap",
-    description: "Project 5 description",
-    image: "/images/projects/6.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
+    tag: ["All", "Servers"],
+    gitUrl: "https://discord.gg/yASSVVhKSh",
     previewUrl: "/",
   },
 ];
@@ -92,13 +74,13 @@ const ProjectsSection = () => {
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="Web"
-          isSelected={tag === "Web"}
+          name="Artist"
+          isSelected={tag === "Artist"}
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="Mobile"
-          isSelected={tag === "Mobile"}
+          name="Servers"
+          isSelected={tag === "Servers"}
         />
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">

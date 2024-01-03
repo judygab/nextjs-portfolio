@@ -51,11 +51,11 @@ const EmailSection = () => {
         </h5>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
           {" "}
-          We are excited to announce that we are actively seeking new clients! Our 
+          we&apos;re excited to announce that we are actively seeking new clients! Our 
           team is dedicated to providing exceptional service and innovative solutions
            tailored to meet your unique needs. Whether you're a small business, a 
            large corporation, or an individual looking for specialized assistance, 
-           we're here to help you achieve your goals. Partner with us to experience 
+           we&apos;re here to help you achieve your goals. Partner with us to experience 
            a commitment to excellence and a passion for delivering results that exceed 
            expectations. Let's collaborate to create success together!
         </p>

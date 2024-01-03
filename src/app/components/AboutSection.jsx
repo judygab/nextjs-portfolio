@@ -47,8 +47,8 @@ const AboutSection = () => {
           <h2 className="text-4xl font-bold text-white mb-4">About Us</h2>
           <p className="text-base lg:text-lg">
           Botl excels in developing custom, user-friendly bots for 
-          Discord. They offer comprehensive management services for Discord 
-          communities. Their focus is on innovative bot creation to 
+          Discord. We offer comprehensive management services for Discord 
+          communities. Our focus is on innovative bot creation to 
           enhance user engagement.
           </p>
           <div className="flex flex-row justify-start mt-8">

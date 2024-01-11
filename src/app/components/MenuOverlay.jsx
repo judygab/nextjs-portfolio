@@ -1,3 +1,4 @@
+// This component is useless for time being. I will use it later if needed.
 import React from "react";
 import NavLink from "./NavLink";
 

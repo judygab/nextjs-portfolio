@@ -25,3 +25,13 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.pfp-container {
+  overflow: hidden;
+}
+
+.pfp {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}

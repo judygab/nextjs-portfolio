@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -16,12 +20,61 @@
   }
 }
 
+/* Light mode styles */
+.light {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 240, 240, 240;
+}
+
+/* Dark mode styles */
+.dark {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 18, 18, 18;
+  --background-end-rgb: 0, 0, 0;
+}
+
+html,
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Mobile Hero Section Animations */
+@media (max-width: 1023px) {
+  .mobile-tap-animation {
+    animation: gentle-pulse 4s ease-in-out infinite;
+  }
+  
+  .mobile-button-tap:active {
+    transform: scale(0.95) !important;
+    transition: transform 0.1s ease;
+  }
+  
+  @keyframes gentle-pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.01);
+    }
+  }
+}
+
+/* Mobile Project Colors */
+@media (max-width: 1023px) {
+  .project-card-mobile {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .project-card-mobile:active {
+    transform: translateY(2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  }
 }

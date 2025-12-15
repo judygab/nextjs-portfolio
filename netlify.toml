@@ -1,0 +1,29 @@
+[build]
+  command = "npm run build"
+  publish = "out"
+
+[build.environment]
+  NEXT_TELEMETRY_DISABLED = "1"
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+
+# Handle client-side routing for static export
+[[redirects]]
+  from = "/projects/:id"
+  to = "/projects/:id/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/projects"
+  to = "/projects/index.html"
+  status = 200
+
+# Catch-all redirect for SPA behavior
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Environment variables for EmailJS (you'll set these in Netlify dashboard)
+# NEXT_PUBLIC_EMAILJS_SERVICE_ID = "service_1x0svai"
+# NEXT_PUBLIC_EMAILJS_TEMPLATE_ID = "template_h319xqd"  
+# NEXT_PUBLIC_EMAILJS_PUBLIC_KEY = "79x3ZduLXUMHgeEnS"

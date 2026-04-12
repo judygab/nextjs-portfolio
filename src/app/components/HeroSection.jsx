@@ -15,31 +15,42 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
         >
-          <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
-              Hello, I&apos;m{" "}
+          {/*Availability badge ~ can switch pill to red and the txt to unavailable if busy*/}
+          <div className="inline-flex items-center gap-2 mb-6 px-3 py-1.5 rounded-full border border-green-500/20 bg-green-500/5">
+            <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
+            <span className="text-[11px] font-medium tracking-widest uppercase text-green-400">
+              Available for work
             </span>
-            <br></br>
+          </div>
+          <h1 className="text-white mb-2 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
+              Hello, I&apos;m Judy.
+            </span>
+          </h1>
+
+          {/*Role animation on its own line ~ lookes more lively*/}
+          <div className="min-h-[44px] mb-5">
             <TypeAnimation
               sequence={[
-                "Judy",
-                1000,
-                "Web Developer",
+                "FullStack Developer",
                 1000,
                 "Mobile Developer",
                 1000,
                 "UI/UX Designer",
                 1000,
               ]}
-              wrapper="span"
+              wrapper="p"
               speed={50}
               repeat={Infinity}
+              className="text-2xl sm:text-3xl font-semibold text-[#ADB7BE]"
             />
-          </h1>
+          </div>
+
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
             voluptuous.
           </p>
+
           <div>
             <Link
               href="/#contact"
